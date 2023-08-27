@@ -18,11 +18,11 @@ body {
   border: 2px solid black;
 }
 nav {
-  border: solid green;
+  /* border: solid green; */
   display: flex;
   justify-content: space-between;
 }
-h1, h2 {
+h1, h2, p {
   font-variant: small-caps;
   background-color: #f0f0f0;
   width: fit-content;
@@ -47,10 +47,10 @@ a:active {
   color: #c0c0c0;
 }
 .nav-right {
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 section {
-  color: #c0c0c0;
+  /* color: #c0c0c0; */
   transition-property: background-color color font-size;
   transition-duration: 2s;
   transition-delay: 0.5s;
@@ -67,11 +67,11 @@ ul {
 }
 
 li {
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 
 header {
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
 }
 
 #duck {
@@ -83,25 +83,28 @@ footer {
   flex-direction: column;
   text-align: center;
 }
+footer img {
+  max-width: 5%;
+}
 
 .text {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 
 .text p {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 
 .duck {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 
 #emergency {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 .grid-container {
-  border: solid blue;
+  /* border: solid blue; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3px;
@@ -115,4 +118,15 @@ footer {
   justify-content: center;
   align-items: center;
   height: 150px;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  max-width: 30%;
+  padding: 2%;
+}
+form button {
+  max-width: fit-content;
+  margin-top: 2%;
+  align-self: end;
 }
