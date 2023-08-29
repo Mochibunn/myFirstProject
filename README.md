@@ -1,4 +1,4 @@
-# Ducky *!*
+# Ducky *!* 🦆
 Welcome to the WD#043 workshop for week 1 of the bootcamp *!*
 If you are just looking for the webpage instead of the repo, feel free to visit it anytime [here!](https://mochibunn.github.io/myFirstProject/ "Deployed version of the project")
 
