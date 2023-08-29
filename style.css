@@ -230,6 +230,10 @@ form {
 form input {
   margin-bottom: 3%;
 }
+#github {
+  display: flex;
+  justify-content: center;
+}
 button {
   max-width: fit-content;
   margin-top: 2%;
