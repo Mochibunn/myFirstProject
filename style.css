@@ -1,12 +1,3 @@
-/* @keyframes unblur {
-  from {
-    text-shadow: 0 0 8px #c0c0c0;
-
-  }
-  to {
-    text-shadow: 0;
-  }
-} */
 html { /* TODO perhaps make the bg just #16191a ? */
   font-family: Arial;
   background-color: #e5e5f7;
@@ -38,6 +29,7 @@ h1, h2, p {
   background-color: #f0f0f0;
   padding: 1% 2%;
   vertical-align: middle;
+  animation: color-change 30s infinite;
   /* border: solid 2px magenta; */
 }
 a {
@@ -136,10 +128,30 @@ duck a {
 #duck:hover::after {
   opacity: 1;
 }
-#duck:hover {
+#duck:hover, #duck:hover button {
   font-size: 1.6rem;
   background-size: cover;
   animation: color-change 5s infinite;
+  transition: font-size 0.5 ease;
+}
+#duck h2, #duck p {
+  background-color: #f0f0f0;
+  transition: background-color 0.5s ease;
+}
+#duck button {
+  background-color: #f0f0f0;
+  transition: background-color 0.5s ease, font-size 0.5s ease;
+  font-size: 1rem;
+}
+#duck:hover h2, #duck:hover p {
+  background-color: black;
+}
+#duck:hover button, #duck:hover button p {
+  background-color: black;
+  border: none;
+}
+#duck:hover button:hover, #duck:hover button p:hover {
+  background-color: #333333;
 }
 @keyframes color-change {
   0% { color: red; }
