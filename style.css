@@ -1,4 +1,4 @@
-@keyframes unblur {
+/* @keyframes unblur {
   from {
     text-shadow: 0 0 8px #c0c0c0;
 
@@ -6,8 +6,8 @@
   to {
     text-shadow: 0;
   }
-}
-html {
+} */
+html { /* TODO perhaps make the bg just #16191a ? */
   font-family: Arial;
   background-color: #e5e5f7;
   opacity: 0.8;
@@ -29,7 +29,7 @@ h1, h2, p {
   background-color: #f0f0f0;
   width: fit-content;
   padding: 5px;
-  animation: unblur 3s 1s 2;
+  /* animation: unblur 3s 1s 2s; */
 }
 .nav-left {
   display: flex;
@@ -54,16 +54,6 @@ img {
 a:active {
   color: #c0c0c0;
 }
-section {
-  transition-property: background-color color font-size;
-  transition-duration: 2s;
-  transition-delay: 0.5s;
-}
-section:hover {
-  color: #00ff41;
-  font-size: 1.6rem;
-  background-color: #111111;
-}
 ul {
   display: flex;
   justify-content: space-evenly; 
@@ -75,16 +65,16 @@ ul a {
 }
 
 li {
-    /* border: 4px solid magenta; */
-    margin: 0 0.6em;
-    padding: 1em 0.5em;
+  /* border: 4px solid magenta; */
+  margin: 0 0.6em;
+  padding: 1em 0.5em;
 }
 
 header h1, p{
-    /* border: 2px solid orange; */
-    text-align: center;
-    margin: 0.5em auto;
-  }
+  /* border: 2px solid orange; */
+  text-align: center;
+  margin: 0.5em auto;
+}
 
 
 footer {
@@ -114,11 +104,52 @@ footer img {
 duck a {
   display: block;
 }
+.duckbg {
+  z-index: 5;
+}
 #duck {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-image: none;
+  position: relative;
+  background-size: cover;
+  transition: all 1s ease;
+  transition-delay: 0.5s;
   /* border: dashed 6px red; */
+}
+#duck::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://video-images.vice.com/articles/6332102a0b7b1a0094ae5d64/lede/1664225689680-screen-shot-2022-09-26-at-45430-pm.png');
+  background-size: cover;
+  opacity: 0; /* Start with no opacity */
+  pointer-events: none; /* Allow hover to pass through */
+  z-index: -1; /* Place it behind the content */
+  transition: opacity 1s ease; /* Transition opacity */
+  transition-delay: 0.5s;
+}
+#duck:hover::after {
+  opacity: 1;
+}
+#duck:hover {
+  font-size: 1.6rem;
+  background-size: cover;
+  animation: color-change 5s infinite;
+}
+@keyframes color-change {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellowgreen; }
+  42% { color: green}
+  57% { color: skyblue}
+  71% { color: blue}
+  85% { color: purple}
+  100% { color:red}
 }
 .duckimg {
   display: flex;
@@ -133,10 +164,6 @@ duck a {
   display: block;
   max-width: 100% /* Adjust the width of the image */
 }
-
-/* main {
-  border: dotted 5px lime;
-} */
 
 #emergency {
   display: flex;
