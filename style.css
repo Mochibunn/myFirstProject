@@ -21,6 +21,7 @@ nav {
   /* border: solid green; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 2em;
 }
 h1, h2, p {
@@ -32,25 +33,26 @@ h1, h2, p {
 }
 .nav-left {
   display: flex;
-  align-items: center; 
   font-size: xx-large;
   font-weight: bolder;
+  background-color: #f0f0f0;
+  padding: 1% 2%;
+  vertical-align: middle;
+  /* border: solid 2px magenta; */
 }
 a {
   text-decoration: none;
   color: black;
+  font-weight: bolder;
 }
 a:hover {
-  color: #444cf7;
+  color: #c0c0c0;
 }
 img {
   max-width: 30%;
 }
 a:active {
   color: #c0c0c0;
-}
-.nav-right {
-    /* border: 2px solid green; */
 }
 section {
   transition-property: background-color color font-size;
@@ -67,15 +69,19 @@ ul {
   justify-content: space-evenly; 
   list-style: none;
 }
+ul a {
+  background-color: #f0f0f0;
+  padding: 1em;
+}
 
 li {
-    border: 4px solid magenta;
+    /* border: 4px solid magenta; */
     margin: 0 0.6em;
     padding: 1em 0.5em;
 }
 
 header h1, p{
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     text-align: center;
     margin: 0.5em auto;
   }
@@ -91,7 +97,7 @@ footer img {
 }
 
 .text {
-  border: 4px solid fuchsia;
+  /* border: 4px solid fuchsia; */
   padding: 0 10px;
   text-align: center;
 }
@@ -101,29 +107,25 @@ footer img {
 }
 
 .text p {
-  border: 2px solid yellow;
-  margin: 0;
+  /* border: 2px solid yellow; */
+  margin: 2% auto;
 }
-.text button {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  padding: 1em;
-}
+
 duck a {
   display: block;
 }
 #duck {
   display: flex;
-  justify-content: space-around; /* Distribute space evenly between divs */
+  justify-content: space-around;
   align-items: center;
-  border: dashed 6px red;
+  /* border: dashed 6px red; */
 }
 .duckimg {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid brown;
-  width: 20%; /* Adjust the width of the duck image div */
+  /* border: 4px solid brown; */
+  width: 20%;
   flex-shrink: 0; /* Prevent further shrinking of the div */
 }
 
@@ -132,9 +134,9 @@ duck a {
   max-width: 100% /* Adjust the width of the image */
 }
 
-main {
+/* main {
   border: dotted 5px lime;
-}
+} */
 
 #emergency {
   display: flex;
@@ -189,9 +191,14 @@ form {
 form input {
   margin-bottom: 3%;
 }
-form button {
+button {
   max-width: fit-content;
   margin-top: 2%;
   padding: 2% 8%;
   align-self: center;
+  font-weight: bolder;
+  background-color: #f0f0f0;
+}
+button:hover {
+  color: #444cf7;
 }
